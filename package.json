@@ -1,0 +1,45 @@
+{
+    "name": "boilerplate-webpack",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "setup": "git checkout --orphan gh-pages && git reset --hard && git commit --allow-empty -m \"Init gh-pages\" && git push origin gh-pages && git checkout main",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack --config webpack.prod.js",
+        "dev": "webpack serve --config webpack.dev.js",
+        "deploy": "npm run build && gh-pages -d dist -b gh-pages && git checkout main"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+${repository_url}"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "${repository_url}/issues"
+    },
+    "homepage": "${repository_url}#readme",
+    "devDependencies": {
+        "@eslint/compat": "^2.1.0",
+        "@eslint/js": "^9.39.4",
+        "css-loader": "^7.1.2",
+        "eslint": "^9.39.4",
+        "eslint-config-airbnb-extended": "^3.1.0",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-import": "^2.32.0",
+        "eslint-plugin-prettier": "^5.5.5",
+        "html-loader": "^5.1.0",
+        "html-webpack-plugin": "^5.6.6",
+        "prettier": "3.8.3",
+        "style-loader": "^4.0.0",
+        "webpack": "^5.104.1",
+        "webpack-cli": "^6.0.1",
+        "webpack-dev-server": "^5.2.4",
+        "webpack-merge": "^6.0.1"
+    },
+    "dependencies": {
+        "gh-pages": "^6.3.0"
+    }
+}
