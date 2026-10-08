@@ -1,4 +1,4 @@
 import { fetchWeatherData } from './app/dataCollector'
 import './style.css'
 
-fetchWeatherData('london')
+console.log(fetchWeatherData('london'))
