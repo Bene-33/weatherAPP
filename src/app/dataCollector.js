@@ -17,7 +17,7 @@ function extractWeather(data) {
         location: data.resolvedAddress,
         currentTemperature: data.currentConditions.temp,
         currentCondition: data.currentConditions.conditions,
-        nextDays: data.days.slice(0, 3).map((day) => ({
+        nextDays: data.days.slice(0, 4).map((day) => ({
             date: day.datetime,
             temperature: day.temp,
             condition: day.conditions,
