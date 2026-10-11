@@ -1,6 +1,6 @@
 async function fetchWeatherData(location) {
     try {
-        const urlFahrenheit = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=us&include=current&key=BNCLX3JP9DD3VCB79F7YL7PZH&contentType=json`
+        const urlFahrenheit = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=us&key=BNCLX3JP9DD3VCB79F7YL7PZH&contentType=json`
         const urlMetric = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=metric&key=BNCLX3JP9DD3VCB79F7YL7PZH&contentType=json`
 
         const fahrenheitResponse = await (await fetch(urlFahrenheit)).json()
